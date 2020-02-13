@@ -1,0 +1,13 @@
+<button class="btn btn-primary" (click)="onDisplayDetails()">
+  Display Details
+</button>
+
+<p *ngIf="show_paragraphs">Secret password = tuna</p>
+
+<p
+  *ngFor="let logItem of log; let i = index"
+  [ngStyle]="{ backgroundColor: i >= 4 ? 'blue' : 'transparent' }"
+  [ngClass]="{ fifth: i >= 4 }"
+>
+  {{ logItem }}
+</p>

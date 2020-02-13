@@ -1,0 +1,16 @@
+<input
+  type="text"
+  class="form-control"
+  [(ngModel)]="username"
+  (input)="onChangeUsername($event)"
+/>
+
+<p>{{ shown_username }}</p>
+
+<button
+  class="btn btn-primary"
+  [disabled]="!allowShowUsername()"
+  (click)="onShowUsername($event)"
+>
+  Show username
+</button>
